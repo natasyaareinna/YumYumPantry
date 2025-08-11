@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>🍰 Cute Recipe Gallery</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <h1>🍓 YumYum Pantry🍓</h1>
+  <p>Click a recipe card to see the full yummy details!</p>
+  <span class="limitedOffer" onclick="location.href='admin.php';" style="cursor: pointer;">Admin</span>
+</header>
+
+<main id="gallery"></main>
+
+<!-- Popup Modal -->
+<div id="popup" class="hidden">
+  <div class="popup-content">
+    <button id="closeBtn">&times;</button>
+    <h2 id="popup-title"></h2>
+    <img id="popup-image" src="" alt="Recipe Image" />
+    <p id="popup-desc"></p>
+    <h3>Ingredients:</h3>
+    <ul id="popup-ingredients"></ul>
+    <h3>Instructions:</h3>
+    <ol id="popup-instructions"></ol>
+     <p id="thankyou-msg" style="display:none; color:#ff4081; font-weight:700; font-size:1.2rem; margin-top:10px; text-align:center;">
+      Thank you for ordering!
+      </p>
+  </div>
+</div>
+
+<!-- Cart Button -->
+<button id="cart-btn">Cart (0)</button>
+
+
+<!-- Cart Modal -->
+<div id="cart-modal" class="hidden">
+  <div class="popup-content">
+    <button id="cart-closeBtn">&times;</button>
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p id="cart-total"></p>
+    <div class="cart-btns">
+      <button id="checkout-btn">Checkout</button>
+      <button id="clear-btn">Clear Cart</button>
+    </div>
+    <p id="thankyou-msg" style="display:none; color:#ff4081; font-weight:700; font-size:1.2rem; margin-top:10px;"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
